@@ -1,20 +1,27 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
-@(message: String)
+@()
 
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
-@main("Welcome to Play") {
+@main("tab_1"){
 
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @play20.welcome(message, style = "Java")
+<div class="container" >
+ <form>
+  <div class="row">
+    <div class="form-group col-md-6">
+     <div class="center-block">
+      <label for="file1">Arquivo de Produtos</label>
+      <input type="file" id="file1">
+     </div>
+    </div>
+
+    <div class="center-block form-group col-md-6">
+     <label for="file2">Arquivo de Preços</label>
+     <input type="file" id="file2">
+    </div>
+   </div>
+  <button type="submit" class="btn btn-default center-block">Iniciar Comparação de Arquivos</button>
+ </form>
+
+</div>
+
+
 
 }

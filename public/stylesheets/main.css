@@ -1,0 +1,22 @@
+.body{
+    margin:0px;
+    background:#F0F0F0;
+}
+.header {
+    height:150px;
+    background:#000;
+    border:1px solid #CCC;
+    width:100%;
+    margin:0px auto;
+}
+.content {
+    width:100%;
+    background: #073763;
+    border: 1px solid #CCC;
+    height: 2000px;
+    margin: 0px auto;
+}
+
+.logo {
+    margin: auto;
+}
