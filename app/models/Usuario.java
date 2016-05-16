@@ -3,7 +3,7 @@ package models;
 /**
  * Created by gleydson on 14/05/16.
  */
-public class Usuario  {
+public class Usuario{
 
     public Long id;
 

@@ -3,15 +3,16 @@ name := """RecordLinkage"""
 
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayJava)
+lazy val root = (project in file(".")).enablePlugins(PlayJava,PlayEbean)
 
 scalaVersion := "2.11.7"
 
-//addSbtPlugin("com.typesafe.sbt" % "sbt-play-ebean" % "1.0.0")
 
 libraryDependencies ++= Seq(
   "no.priv.garshol.duke" % "duke" % "1.2",
-  "org.webjars" % "bootstrap" % "3.3.4",
+  "no.priv.garshol.duke" % "duke" % "1.2",
+  "org.json" % "json" % "20160212",
+  "commons-codec" % "commons-codec" % "1.10",
   javaJdbc,
   cache,
   javaWs
