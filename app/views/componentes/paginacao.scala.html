@@ -1,0 +1,46 @@
+@(temAnterior: Boolean, paginaLinkAnterior: String, temProximo: Boolean, linkProximaPagina: String, texto: Integer)
+
+<nav style="text-align:center;">
+	<ul class="pagination">
+	
+		@if(temAnterior) {		
+		    <li>
+		      <a href="@paginaLinkAnterior" aria-label="Anterior">
+		        <span aria-hidden="true">Anterior</span>
+		      </a>
+		    </li>
+		    			    
+		    @if(texto > 1){
+			    <li>
+	            	<a href="@paginaLinkAnterior">@(texto - 1)</a>
+	        	</li>
+        	}
+        
+		 } else {
+		 	<li class="prev disabled">
+		         <span aria-hidden="true">Anterior</span>
+		     </li>	 
+		 } 
+
+        <li class="active">
+            <a>@texto</a>
+        </li>    
+                
+        @if(temProximo) {
+	        <li>
+	            <a href="@linkProximaPagina">@(texto + 1)</a>
+	        </li>         	
+        
+		    <li>
+		      <a href="@linkProximaPagina" aria-label="Próximo">
+		        <span aria-hidden="true">Próximo</span>
+		      </a>
+		    </li>
+		} else {
+            <li class="next disabled">
+                <span aria-hidden="true">Próximo</span>
+            </li>		
+		}        
+	        	
+	</ul>
+</nav>

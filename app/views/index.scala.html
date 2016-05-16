@@ -1,24 +1,29 @@
-@()
+@(mensagem: String)
 
 @main("tab_1"){
 
-<div class="container" >
- <form>
-  <div class="row">
-    <div class="form-group col-md-6">
-     <div class="center-block">
-      <label for="file1">Arquivo de Produtos</label>
-      <input type="file" id="file1">
-     </div>
-    </div>
+<div class="container text-white media" style="margin-top: 80px" >
+    @views.html.componentes.msg(mensagem)
+    <form name="fileUploadForm" method="POST" enctype="multipart/form-data" action="@routes.HomeController.compararArquivos()">
+        <div class="row">
+            <div class="col-md-3 "></div>
+            <div class="form-group col-md-4">
+                <label for="file1">Arquivo de Produtos</label>
+                <input type="file" name="file1" id="file1">
+            </div>
 
-    <div class="center-block form-group col-md-6">
-     <label for="file2">Arquivo de Preços</label>
-     <input type="file" id="file2">
-    </div>
-   </div>
-  <button type="submit" class="btn btn-default center-block">Iniciar Comparação de Arquivos</button>
- </form>
+            <div class="form-group col-md-4">
+                <label for="file2">Arquivo de Preços</label>
+                <input type="file" name="file2" id="file2">
+            </div>
+            <div class="col-md-2 "></div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 "></div>
+            <button type="submit" class="btn btn-default col-md-4" style="margin-top:40px">Iniciar Comparação de Arquivos</button>
+        </div>
+    </form>
 
 </div>
 

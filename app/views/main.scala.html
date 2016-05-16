@@ -40,6 +40,12 @@
             <li role="presentation"><a href="@routes.HomeController.index()">Enviar arquivos</a></li>
             <li role="presentation" class="active"><a href="@routes.HomeController.arquivosSalvos()">Arquivos salvos</a></li>
         }
+
+        @if(tab!="tab_2" && tab!="tab_1"){
+        <li role="presentation"><a href="@routes.HomeController.index()">Enviar arquivos</a></li>
+        <li role="presentation"><a href="@routes.HomeController.arquivosSalvos()">Arquivos salvos</a></li>
+        }
+
         <li role="presentation"><a href="#">Sair</a></li>
     </ul>
     <div class="content">

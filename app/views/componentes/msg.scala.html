@@ -1,0 +1,13 @@
+@(mensagem: String)
+
+@if(mensagem != null){
+<div class="alert alert-warning alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+		<div class="text-left"><strong>Aviso! </strong>@mensagem<br/></div>
+</div>
+}
+
+<script>
+  $().alert('close')
+</script>

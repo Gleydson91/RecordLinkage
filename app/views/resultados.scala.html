@@ -1,0 +1,38 @@
+@(lista: List[recordlinkage.Link[org.json.JSONObject]], hasPrev: Boolean,hasNext: Boolean, pag: Integer)
+
+@main(""){
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-heading"><div class="center-block">Resultados</div>
+        <!-- Table -->
+        <table class="table table-hover">
+            <tr>
+                <th>Produto</th>
+                <th>Produto Preço</th>
+                <th>Preço</th>
+                <th>Semelhança</th>
+            </tr>
+    @for(link <- lista) {
+            <tr>
+                <th>@link.getRegistroArquivo1().getString("product_name")</th>
+                <th>@link.getRegistroArquivo2().getString("title")</th>
+                <th>@link.getRegistroArquivo2().getString("price")</th>
+                <th>@link.getSimilaridade()</th>
+            </tr>
+            }
+        </table>
+    </div>
+
+
+    <div class="col-md-12">
+        @views.html.componentes.paginacao(
+        hasPrev,
+        routes.ResultadoController.pagina(pag - 1).toString,
+        hasNext,
+        routes.ResultadoController.pagina(pag + 1).toString,
+        pag + 1
+        )
+    </div>
+
+</div>
+}

@@ -56,6 +56,32 @@ public class ArquivoComparacao {
 	 * for feita a compaaração.
 	 * <p>
 	 *
+	 * @param arquivo
+	 *            Arquivo que contém o conteúdo a ser comparado.
+	 * @param campos
+	 *            Lista de campos a serem comparados.
+	 * @param campoBlocagem
+	 *            Campo a ser usado para a blocagem.
+	 * @throws FileNotFoundException
+	 *             caso o arquivo não seja encontrado
+	 * @throws IllegalArgumentException
+	 *             Caso o conteúdo seja nulo ou se a lista de campos for nula ou
+	 *             vazia.
+	 *
+	 */
+	public ArquivoComparacao(File arquivo, List<String> campos,String campoBlocagem ) throws FileNotFoundException {
+		this(new FileInputStream(arquivo), campos, campoBlocagem);
+	}
+
+	/**
+	 * Cria um <code>ArvquivoComparacao</code> que contém o conteúdo a ser
+	 * comparado.
+	 * <p>
+	 * Deve ser levado em consisideração a quantidade e ordem de itens na lista
+	 * de campos, pois esssas informações serão levadas em consideração quando
+	 * for feita a compaaração.
+	 * <p>
+	 *
 	 * @param conteudo
 	 *            Conteúdo a ser comparado.
 	 * @param campos
