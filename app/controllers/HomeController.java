@@ -2,6 +2,7 @@ package controllers;
 
 
 import com.fasterxml.jackson.databind.util.JSONPObject;
+import models.Usuario;
 import play.mvc.*;
 import javax.inject.*;
 

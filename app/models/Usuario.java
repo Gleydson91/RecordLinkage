@@ -12,7 +12,7 @@ public class Usuario extends Model{
 
     public Long id;
 
-    public String nome;
+    private String nome;
 
     public String username;
 
